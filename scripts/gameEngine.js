@@ -5,8 +5,8 @@ export class GameEngine {
         this.currentScene = 0;
         this.gameState = {
             flags: {
-                meetMyungju: false,
-                meetJuhee: false
+                meetJiyoung: false,
+                meetNayoung: false
             }
         };
     }
@@ -61,9 +61,6 @@ export class GameEngine {
             } 
             // 다음 씬으로 이동
             else if (choice.nextScene !== undefined) {
-                // 선택한 씬의 마지막 씬까지의 거리 계산
-                const remainingScenes = storyData[this.currentChapter][this.currentRoute].scenes.length - choice.nextScene;
-                
                 // 다음 챕터로 전환해야 하는 씬이 있는지 확인
                 const targetScene = storyData[this.currentChapter][this.currentRoute].scenes[choice.nextScene];
                 if (targetScene.nextChapter) {

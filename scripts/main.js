@@ -1,8 +1,6 @@
-// 게임 엔진과 스토리 데이터 임포트
 import { GameEngine } from './gameEngine.js';
 import { storyData } from '../stories/index.js';
 
-// 게임 인스턴스 생성
 const game = new GameEngine();
 
 // 게임 초기화 및 이벤트 리스너 설정
@@ -87,7 +85,7 @@ function initializeGame() {
                 sceneElement.style.backgroundImage = `url('images/${currentScene.background}')`;
                 sceneElement.style.opacity = '1';
                 
-                // 챕터 전환 알림 표시 (선택사항)
+                // 챕터 전환 알림 표시
                 showChapterTransition(currentScene.nextChapter);
             }, 1500);
         }
